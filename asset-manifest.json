@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.241ea7a5.css",
-    "main.js": "/static/js/main.dee2860c.js",
-    "index.html": "/index.html",
-    "main.241ea7a5.css.map": "/static/css/main.241ea7a5.css.map",
-    "main.dee2860c.js.map": "/static/js/main.dee2860c.js.map"
+    "main.css": "/anykeyguru/react-meals-db/static/css/main.241ea7a5.css",
+    "main.js": "/anykeyguru/react-meals-db/static/js/main.dee2860c.js",
+    "index.html": "/anykeyguru/react-meals-db/index.html",
+    "main.241ea7a5.css.map": "/anykeyguru/react-meals-db/static/css/main.241ea7a5.css.map",
+    "main.dee2860c.js.map": "/anykeyguru/react-meals-db/static/js/main.dee2860c.js.map"
   },
   "entrypoints": [
     "static/css/main.241ea7a5.css",
