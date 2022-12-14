@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 
 function MealItemCard(props) {
-    const {strMeal, strMealThumb, idMeal} = props
+    const {strMeal, strMealThumb, idMeal } = props
     return (
         <div className="card">
             <div className="card-image">

@@ -47,7 +47,7 @@ function Reciept() {
                                     }
                                 )
                             }
-                        </div> : ""}
+                        </div> : null}
                     </div>
                 </div>
             )}

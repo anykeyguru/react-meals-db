@@ -2,7 +2,8 @@ import {useState, useEffect} from "react";
 import {GetAllCategories} from "../../api"
 import {Preloader} from  "../../components/Preloader"
 import CategoryList from "../../components/CategoryList";
-function Home() {
+function Home(props) {
+    const {defineCatDesc=Function.prototype} = props
     const [catalog, setCatalog] = useState([])
     const {data, isPending, error} = GetAllCategories();
     useEffect(()=>{
@@ -13,7 +14,7 @@ function Home() {
     },[data])
     return <>
         {isPending ? <Preloader/> : (
-            <CategoryList catalog={catalog}/>
+            <CategoryList catalog={catalog} defineCatDesc={defineCatDesc}/>
         )}
 
     </>

@@ -4,9 +4,9 @@ function MealItemList(props) {
     const {meals} = props
     return <div className="list">
         {
-            meals.meals && meals.meals.map(el => {
+            meals.length > 0 ? meals.map(el => {
                 return <MealItemCard key={el.idMeal} {...el}/>
-            })
+            }) : null
         }
     </div>
 }
