@@ -74,6 +74,9 @@ nav {
   min-height: calc(100vh - 70px - 64px);
   z-index: 20;
 }
+.logob {
+  font-size: 1.3rem !important;
+}
 @media (min-width: 990px) {
   .menu {
     display: none !important;
@@ -89,6 +92,9 @@ nav {
     min-width: 150px;
     min-height: calc(100vh - 70px - 56px);
     z-index: 20;
+  }
+  .logob {
+    font-size: 2rem !important;
   }
 }
 .description {

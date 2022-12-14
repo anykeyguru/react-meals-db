@@ -12,7 +12,7 @@ function Header() {
     return (
         <nav className="indigo darken-3">
             <div className="nav-wrapper">
-                <Link to="/" className="brand-logo">React Meals DB</Link>
+                <Link to="/" className="brand-logo logob">React Meals DB</Link>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
                     <li><Link  to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
