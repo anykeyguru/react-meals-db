@@ -7,11 +7,13 @@ import About from "./pages/about/About";
 import NotFound from "./pages/notfound";
 import Category from "./pages/category/Category";
 import Reciept from "./pages/reciept/Reciept";
+import {GIT_BASENAME_URL} from "./config";
+
 
 function App() {
     return (
         <>
-        <Router>
+        <Router basename={GIT_BASENAME_URL}>
             <Header/>
             <main className="container content">
                 <Switch>
