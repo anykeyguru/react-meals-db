@@ -6,11 +6,9 @@ function Home() {
     const [catalog, setCatalog] = useState([])
     const {data, isPending, error} = GetAllCategories();
     useEffect(()=>{
-        console.log(data)
         if (data){
             setCatalog(data.categories);
         } else {
-            console.log(error)
         }
     },[data])
     return <>

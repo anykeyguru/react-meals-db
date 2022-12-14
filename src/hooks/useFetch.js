@@ -24,7 +24,6 @@ function useFetch(murl, method='GET') {
             })
             .catch((err)=>{
                 if (err.name === 'AbortError'){
-                    console.log('Fetch aborted')
                 } else {
                     setError(err);
                     setIsPending(false);

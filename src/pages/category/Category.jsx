@@ -9,8 +9,6 @@ function Category() {
     const {data, isPending, error} = GetFilteredCategory(category)
 
     useEffect(()=>{
-        data && console.log(data.meals);
-
     }, [data])
     return <div>
         {
