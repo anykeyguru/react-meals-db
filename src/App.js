@@ -21,6 +21,7 @@ function App() {
     return (
         <>
         <Router basename={GIT_BASENAME_URL}>
+        {/*<Router >*/}
             <Header/>
             <main className="container content">
                 <Switch>
