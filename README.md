@@ -2,6 +2,8 @@
 
 This project was deployed with [API](https://www.themealdb.com/api.php).
 
+You can try this on  [WEB SITE DEMO](https://anykeyguru.github.io/react-meals-db/).
+
 ## Available Scripts
 
 In the project directory, you can run:
