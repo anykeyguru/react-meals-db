@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-meals-db/static/css/main.10cd0bbd.css",
-    "main.js": "/react-meals-db/static/js/main.c95b94fe.js",
+    "main.css": "/react-meals-db/static/css/main.c2f3d9ba.css",
+    "main.js": "/react-meals-db/static/js/main.35be5dc9.js",
     "index.html": "/react-meals-db/index.html",
-    "main.10cd0bbd.css.map": "/react-meals-db/static/css/main.10cd0bbd.css.map",
-    "main.c95b94fe.js.map": "/react-meals-db/static/js/main.c95b94fe.js.map"
+    "main.c2f3d9ba.css.map": "/react-meals-db/static/css/main.c2f3d9ba.css.map",
+    "main.35be5dc9.js.map": "/react-meals-db/static/js/main.35be5dc9.js.map"
   },
   "entrypoints": [
-    "static/css/main.10cd0bbd.css",
-    "static/js/main.c95b94fe.js"
+    "static/css/main.c2f3d9ba.css",
+    "static/js/main.35be5dc9.js"
   ]
 }
