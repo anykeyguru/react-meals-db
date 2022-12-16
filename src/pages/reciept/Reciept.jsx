@@ -17,12 +17,12 @@ function Reciept() {
     });
 
     useEffect(() => {
-        console.log(data)
         if (data) {
-            if (data.meals){
+            if (data.meals) {
                 setReciept({
                     ...reciept,
                     idMeal: data.meals[0].idMeal,
+                    ...data.meals[0],
                     strMeal: data.meals[0].strMeal,
                     strInstructions: data.meals[0].strInstructions,
                     strMealThumb: data.meals[0].strMealThumb,
@@ -33,25 +33,50 @@ function Reciept() {
         // eslint-disable-next-line
     }, [data])
     return (
-        <div >
+        <div>
             {isPending ? <Preloader/> : (
                 <div className={reciept.idMeal && "reciept"}>
                     {
                         !reciept.idMeal && <NotFound/>
                     }
                     {
-                        reciept.idMeal && <button onClick={goBack} className='btn btn-back brown darken-3'><i className="large material-icons">arrow_back</i></button>
+                        reciept.idMeal && <button onClick={goBack} className='btn btn-back brown darken-3'><i
+                            className="large material-icons">arrow_back</i></button>
                     }
                     <h2>{reciept.strMeal}</h2>
-                    <p>{reciept.strTags}</p>
-                    <img src={reciept.strMealThumb} alt={reciept.strMeal} width="300px"/>
-                    <p>{reciept.strInstructions}</p>
+                    <img className="pic" src={reciept.strMealThumb} alt={reciept.strMeal}/>
+                    <p><i>Category {reciept.strCategory}</i></p>
+                    <p className="instruction">{reciept.strInstructions}</p>
+                    <table className="striped" style={{width: "100%"}}>
+                        <thead>
+                        <tr>
+                            <td>Ingridient</td>
+                            <td>Measure</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {
+                            Object.keys(reciept).map(key => {
+                                if (key.includes('strIngredient') && reciept[key]) {
+                                    return <tr key={key}>
+                                        <td>{reciept[key]}</td>
+                                        <td>{
+                                            reciept[`strMeasure${key.slice(13)}`]
+                                        }</td>
+                                    </tr>
+                                }
+                                return null
+                            })
+                        }
+                        </tbody>
+                    </table>
                     <div>
                         {reciept.strTags.length > 0 ? <div className="tag-title">
                             <p>tags:</p>
                             {
                                 reciept.strTags.map(el => {
-                                        return <span className="new badge btn-tag blue lighten-5">{el}</span>
+                                        return <span key={el + "_key"}
+                                                     className="new badge btn-tag blue lighten-5">{el}</span>
                                     }
                                 )
                             }

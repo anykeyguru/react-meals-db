@@ -79,27 +79,38 @@ nav {
 .side-bar{
   position: fixed;
   display: flex;
-  flex-direction: column;
+  flex-direction: column ;
   background: rgba(50,50,50,0.6);
   padding: 5px 7px;
   top: 54px;
   left: 0px;
-  min-width: 150px;
+  min-width: 110px;
   min-height: calc(100vh - 70px - 64px);
   z-index: 20;
 }
+
+.side-bar .active {
+  background-color: rgba(50,50,50,0.6);
+}
 .logob {
   font-size: 1.3rem !important;
+}
+.pic {
+  max-width: 100%;
 }
 @media (min-width: 990px) {
   .menu {
     display: none !important;
   }
+  .pic {
+    max-width: 45%;
+  }
   .side-bar{
+
     position: fixed;
     display: flex;
     flex-direction: column;
-    background: rgba(50,50,50,0.6);
+    background: rgba(50,50,50,0.8);
     padding: 5px 7px;
     top: 64px ;
     left: 0px;
@@ -110,6 +121,11 @@ nav {
   .logob {
     font-size: 2rem !important;
   }
+}
+
+.s-nav {
+  padding: 10px;
+  font-size: 2rem;
 }
 .description {
   background: rgba(0, 58, 157, 0.025);
@@ -126,4 +142,11 @@ nav {
 }
 .category-title-text {
   font-size: 3.5rem;
+}
+
+li .active {
+  background-color: #3e2723;
+}
+.instruction {
+  text-align: justify;
 }

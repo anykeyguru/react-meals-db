@@ -1,4 +1,4 @@
-import {useParams, useRouteMatch} from "react-router-dom";
+import {useParams, useRouteMatch, useHistory} from "react-router-dom";
 import {GetAllCategories, GetFilteredCategory} from "../../api";
 import {useContext, useEffect, useState} from "react";
 import {Preloader} from "../../components/Preloader";
@@ -6,6 +6,7 @@ import MealItemList from "../../components/MealItemList";
 import {MealsContext} from "../../context/MealsContext";
 function Category() {
     const categorys = useRouteMatch();
+    const {goBack} = useHistory();
     const {category_description, setDescription} = useContext(MealsContext);
     const {category} = useParams()
     const [meals, setMeals] = useState([])
@@ -28,6 +29,7 @@ function Category() {
         }
     }, [dfcats])
     return <div>
+        <h1><button onClick={goBack} className='btn btn-back brown darken-3'><i className="large material-icons">arrow_back</i></button> {category}</h1>
         {
             meals  && <p className="description">{category_description}</p>
         }
