@@ -40,7 +40,7 @@ function Reciept() {
                         !reciept.idMeal && <NotFound/>
                     }
                     {
-                        reciept.idMeal && <button onClick={goBack} className='btn btn-back purple darken-4'><i className="large material-icons">arrow_back</i></button>
+                        reciept.idMeal && <button onClick={goBack} className='btn btn-back brown darken-3'><i className="large material-icons">arrow_back</i></button>
                     }
                     <h2>{reciept.strMeal}</h2>
                     <p>{reciept.strTags}</p>

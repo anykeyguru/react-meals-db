@@ -21,8 +21,8 @@ function App() {
 
     return (
         <MealsContextProvider>
-        <Router basename={GIT_BASENAME_URL}>
-        {/*<Router >*/}
+        {/*<Router basename={GIT_BASENAME_URL}>*/}
+        <Router >
             <Header/>
             <main className="container content">
                 <Switch>

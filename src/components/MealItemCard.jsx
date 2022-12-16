@@ -12,7 +12,7 @@ function MealItemCard(props) {
 
             </div>
             <div className="card-action">
-                <Link to={`/receipt/${idMeal}`} className="btn-small purple darken-4">Read</Link>
+                <Link to={`/receipt/${idMeal}`} className="btn-small brown darken-3">Read</Link>
             </div>
         </div>
     )

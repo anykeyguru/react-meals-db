@@ -12,7 +12,7 @@ function NotFound() {
             <h1>404</h1>
             <h3>Not found</h3>
         </div>
-        <button className="btn purple darken-4" onClick={goBack}>Back</button>
+        <button className="btn brown darken-3" onClick={goBack}>Back</button>
     </div>
 }
 

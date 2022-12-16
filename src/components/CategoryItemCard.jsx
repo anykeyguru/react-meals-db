@@ -17,7 +17,7 @@ function CategoryItemCard(props) {
             <div className="card-action">
                 <Link
                     to={`/category/${strCategory}`}
-                    className="btn-small purple darken-4"
+                    className="btn-small brown darken-3"
                     onClick={()=>{setDescription(strCategoryDescription)}}>
                     Watch
                 </Link>

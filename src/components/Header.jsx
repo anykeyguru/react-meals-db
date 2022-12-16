@@ -10,7 +10,7 @@ function Header() {
         setIsSideBar(!isSidebar)
     }
     return (
-        <nav className="indigo darken-3">
+        <nav className="brown">
             <div className="nav-wrapper">
                 <Link to="/" className="brand-logo logob">React Meals DB</Link>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
