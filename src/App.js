@@ -4,11 +4,12 @@ import {Footer} from "./components/Footer";
 import Home from "./pages/home/Home";
 import Contact from "./pages/contact/Contact";
 import About from "./pages/about/About";
-import NotFound from "./pages/notfound";
+import NotFound from "./pages/notfound/NotFound";
 import Category from "./pages/category/Category";
 import Reciept from "./pages/reciept/Reciept";
 import {GIT_BASENAME_URL} from "./config";
 import {useState} from "react";
+import {MealsContextProvider} from "./context/MealsContext";
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
     }
 
     return (
-        <>
+        <MealsContextProvider>
         <Router basename={GIT_BASENAME_URL}>
         {/*<Router >*/}
             <Header/>
@@ -35,7 +36,7 @@ function App() {
             </main>
             <Footer/>
         </Router>
-        </>
+        </MealsContextProvider>
     );
 }
 

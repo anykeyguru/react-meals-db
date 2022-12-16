@@ -1,11 +1,11 @@
 import CategoryItemCard from "./CategoryItemCard"
 function CategoryList(props) {
-    const {catalog, defineCatDesc=Function.prototype} = props;
+    const {catalog} = props;
     return (
         <div className="list">
             {
                 catalog.map(category=>{
-                    return <CategoryItemCard key={category.idCategory} {...category} defineCatDesc={defineCatDesc}/>
+                    return <CategoryItemCard key={category.idCategory} {...category}/>
                 })
             }
         </div>

@@ -2,6 +2,7 @@ import {useHistory, useParams} from "react-router-dom";
 import {GetMealById} from "../../api";
 import {useEffect, useState} from "react";
 import {Preloader} from "../../components/Preloader";
+import NotFound from "../notfound/NotFound";
 
 function Reciept() {
     const {rid} = useParams();
@@ -16,24 +17,31 @@ function Reciept() {
     });
 
     useEffect(() => {
+        console.log(data)
         if (data) {
-            setReciept({
-                ...reciept,
-                idMeal: data.meals[0].idMeal,
-                strMeal: data.meals[0].strMeal,
-                strInstructions: data.meals[0].strInstructions,
-                strMealThumb: data.meals[0].strMealThumb,
-                strTags: data.meals[0].strTags ? data.meals[0].strTags.split(',') : []
-            });
+            if (data.meals){
+                setReciept({
+                    ...reciept,
+                    idMeal: data.meals[0].idMeal,
+                    strMeal: data.meals[0].strMeal,
+                    strInstructions: data.meals[0].strInstructions,
+                    strMealThumb: data.meals[0].strMealThumb,
+                    strTags: data.meals[0].strTags ? data.meals[0].strTags.split(',') : []
+                });
+            }
         }
         // eslint-disable-next-line
     }, [data])
     return (
         <div >
             {isPending ? <Preloader/> : (
-                <div className="reciept">
-                    <button onClick={goBack} className='btn btn-back purple darken-4'><i className="large material-icons">arrow_back</i>
-                    </button>
+                <div className={reciept.idMeal && "reciept"}>
+                    {
+                        !reciept.idMeal && <NotFound/>
+                    }
+                    {
+                        reciept.idMeal && <button onClick={goBack} className='btn btn-back purple darken-4'><i className="large material-icons">arrow_back</i></button>
+                    }
                     <h2>{reciept.strMeal}</h2>
                     <p>{reciept.strTags}</p>
                     <img src={reciept.strMealThumb} alt={reciept.strMeal} width="300px"/>

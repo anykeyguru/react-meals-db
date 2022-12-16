@@ -1,9 +1,9 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useContext} from "react";
 import {GetAllCategories} from "../../api"
 import {Preloader} from  "../../components/Preloader"
 import CategoryList from "../../components/CategoryList";
-function Home(props) {
-    const {defineCatDesc=Function.prototype} = props
+import {MealsContext} from "../../context/MealsContext";
+function Home() {
     const [catalog, setCatalog] = useState([])
     const {data, isPending, error} = GetAllCategories();
     useEffect(()=>{
@@ -14,7 +14,7 @@ function Home(props) {
     },[data])
     return <>
         {isPending ? <Preloader/> : (
-            <CategoryList catalog={catalog} defineCatDesc={defineCatDesc}/>
+            <CategoryList catalog={catalog}/>
         )}
 
     </>
