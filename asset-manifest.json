@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.208abc33.css",
-    "main.js": "/static/js/main.9b58b028.js",
-    "index.html": "/index.html",
-    "main.208abc33.css.map": "/static/css/main.208abc33.css.map",
-    "main.9b58b028.js.map": "/static/js/main.9b58b028.js.map"
+    "main.css": "/react-meals-db/static/css/main.208abc33.css",
+    "main.js": "/react-meals-db/static/js/main.c7840d2c.js",
+    "index.html": "/react-meals-db/index.html",
+    "main.208abc33.css.map": "/react-meals-db/static/css/main.208abc33.css.map",
+    "main.c7840d2c.js.map": "/react-meals-db/static/js/main.c7840d2c.js.map"
   },
   "entrypoints": [
     "static/css/main.208abc33.css",
-    "static/js/main.9b58b028.js"
+    "static/js/main.c7840d2c.js"
   ]
 }
